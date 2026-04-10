@@ -34,4 +34,4 @@ Certifique-se de ter o Python instalado em sua máquina.
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/seu-usuario/algoritmos-python.git](https://github.com/seu-usuario/algoritmos-python.git)
+   git clone https://github.com/dutrapaulovm/AEDI.git
