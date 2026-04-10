@@ -1,0 +1,1 @@
+Contém os exercícios resolvidos da primeira lista relacionados ao pensamento computacional
