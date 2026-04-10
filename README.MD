@@ -28,22 +28,6 @@ Este repositório contém as implementações e estudos realizados na disciplina
 * **IDE Sugerida:** VS Code ou PyCharm.
 * **Bibliotecas nativas:** `math`, `time` (para medir execução), `random`.
 
----
-
-## 📊 Tabela de Complexidade (Python)
-
-Uma referência rápida de como o Python se comporta "por baixo do capô":
-
-| Operação | Estrutura | Complexidade |
-| :--- | :--- | :---: |
-| Acessar índice | `list` | $O(1)$ |
-| Adicionar ao final | `list.append()` | $O(1)$ |
-| Inserir/Remover no início | `list.insert(0)` | $O(n)$ |
-| Buscar valor | `dict` (Hash Map) | $O(1)$ |
-| Verificar presença | `set` | $O(1)$ |
-
----
-
 ## 🚀 Como testar os scripts
 
 Certifique-se de ter o Python instalado em sua máquina.
