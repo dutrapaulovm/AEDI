@@ -1,37 +1,73 @@
 # 🐍 Algoritmos e Estruturas de Dados com Python
 
-Este repositório contém as implementações e estudos realizados na disciplina de **Algoritmos e Estruturas de Dados**. O foco é dominar a lógica de programação, entender a eficiência de diferentes abordagens e como Python gerencia dados internamente.
+> Repositório dedicado ao estudo e implementação de conceitos fundamentais de Ciência da Computação.
 
-## 📌 Conceitos Fundamentais
-* **Lógica de Programação:** Estruturas de repetição (`for`, `while`) e condicionais.
-* **Complexidade de Algoritmos:** Noções básicas de Notação Big O ($O(n)$, $O(1)$, etc).
-* **Recursividade:** Resolução de problemas dividindo-os em subproblemas menores.
-* **Manipulação de Dados:** Uso avançado de `list`, `dict`, `set` e `tuple`.
+![Python Version](https://img.shields.io/badge/python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![Learning Process](https://img.shields.io/badge/Status-Em_Progresso-green?style=for-the-badge)
+![Academic Project](https://img.shields.io/badge/IF_Sudeste_MG-muriaé-red?style=for-the-badge)
 
----
-
-## 📂 Organização do Repositório
-
-* `/01-logica-basica`: Exercícios introdutórios (condicionais, loops e funções).
-* `/02-recursao`: Exemplos clássicos como Fatorial, Fibonacci e Torres de Hanói.
-* `/03-listas-e-sequencias`: Implementação manual de Listas Encadeadas e Pilhas.
-* `/04-busca-e-ordenacao`: 
-    * Busca Linear e Busca Binária.
-    * Bubble Sort, Selection Sort e Insertion Sort.
-* `/05-dicionarios-e-sets`: Exercícios sobre tabelas hash e performance de busca.
+Este repositório contém estudos de aprendizado na disciplina de **Algoritmos e Estruturas de Dados I (AEDI)**. O objetivo é desenvolver uma base sólida em lógica de programação, análise de eficiência e manipulação de estruturas complexas utilizando Python.
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas
+## 🎯 Objetivos do Repositório
 
-* **Linguagem:** Python 3.10+
-* **IDE Sugerida:** VS Code ou PyCharm.
-* **Bibliotecas nativas:** `math`, `time` (para medir execução), `random`.
+| Pilar          | Descrição                                                         |
+| :------------- | :---------------------------------------------------------------- |
+| **Lógica**     | Domínio de condicionais, loops e operadores fundamentais.         |
+| **Eficiência** | Compreensão de complexidade algorítmica e Notação Big O.          |
+| **Estruturas** | Implementação e uso de Listas, Pilhas, Filas, Dicionários e Sets. |
+| **Algoritmos** | Domínio de técnicas de Busca, Ordenação e Recursividade.          |
 
-## 🚀 Como testar os scripts
+---
 
-Certifique-se de ter o Python instalado em sua máquina.
+## 📂 Organização do Conhecimento
+
+A estrutura segue a evolução cronológica e teórica da disciplina:
+
+### 🧩 [01. Lógica Básica](./01-logica-basica)
+
+> Fundamentos e as primeiras listas de exercícios em modo procedimental.
+
+- [x] **Lista 01:** Introdução e lógica sequencial.
+- [x] **Lista 02:** Entrada e Saída (IO) e operadores matemáticos.
+- [x] **Lista 03:** Condicionais e Operadores Lógicos.
+
+### ⚙️ [02. Funções](./02-funcoes)
+
+> Modularização, escopo e reutilização de código.
+
+### 🔄 [03. Recursão](./03-recursao)
+
+> Resolução de problemas complexos (Fatorial, Fibonacci, Torres de Hanói).
+
+### 📏 [04. Listas e Sequências](./04-listas-e-sequencias)
+
+> Implementações manuais de Listas Encadeadas, Pilhas e Filas.
+
+### 🕵️ [05. Busca e Ordenação](./05-busca-e-ordenacao)
+
+> De algoritmos simples (Bubble Sort) a eficientes (Merge/Quick Sort).
+
+---
+
+> [!TIP]
+> Para iniciantes na pasta `01-logica-basica`, o código é procedural e focado no passo-a-passo didático, sem o uso de `def`.
+
+---
+
+## 🚀 Como testar
 
 1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/dutrapaulovm/AEDI.git
+
+```bash
+git clone https://github.com/dutrapaulovm/AEDI.git
+```
+
+2. **Execute um script:**
+
+```bash
+python 01-logica-basica/lista-03/lista03_sec1_ex01_soma.py
+```
+
+---
