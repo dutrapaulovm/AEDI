@@ -16,7 +16,7 @@ Este repositório contém estudos de aprendizado na disciplina de **Algoritmos e
 | :------------- | :---------------------------------------------------------------- |
 | **Lógica**     | Domínio de condicionais, loops e operadores fundamentais.         |
 | **Eficiência** | Compreensão de complexidade algorítmica e Notação Big O.          |
-| **Estruturas** | Implementação e uso de Listas, Pilhas, Filas, Dicionários e Sets. |
+| **Estruturas** | Manipulação de Vetores, Matrizes e implementação de Listas, Pilhas e Filas. |
 | **Algoritmos** | Domínio de técnicas de Busca, Ordenação e Recursividade.          |
 
 ---
@@ -33,21 +33,35 @@ A estrutura segue a evolução cronológica e teórica da disciplina:
 - [x] **Lista 02:** Entrada e Saída (IO) e operadores matemáticos.
 - [x] **Lista 03:** Condicionais e Operadores Lógicos.
 
-### ⚙️ [02. Funções](./02-funcoes)
+### 🔁 [02. Laços de Repetição](./laço-repeticao)
+
+> Estruturas de controle para iteração, contadores, acumuladores e validações com `while` e `for`.
+
+- [x] **Unidade 3 - Lista 01:** Laços de repetição simples, loops determinados e contadores.
+- [x] **Unidade 3 - Lista 02:** Loops indeterminados com flags de parada, validações de entrada e algoritmos acumulativos.
+
+### 📊 [03. Vetores e Matrizes](./vetores-matrizes)
+
+> Estruturas homogêneas unidimensionais (vetores/arrays 1D) e multidimensionais (matrizes/arrays 2D).
+
+- [x] **Unidade 4 - Lista 01:** Criação, leitura, busca linear, ordenação básica e manipulação de vetores.
+- [x] **Unidade 4 - Lista 02:** Operações matriciais, soma, produto de matrizes, transposição e diagonais.
+
+### ⚙️ [04. Funções](./02-funcoes)
 
 > Modularização, escopo e reutilização de código.
 
-### 🔄 [03. Recursão](./03-recursao)
+### 🔄 [05. Recursão](./03-recursao)
 
-> Resolução de problemas complexos (Fatorial, Fibonacci, Torres de Hanói).
+> Resolução de problemas complexos dividindo-os em subproblemas (Fatorial, Fibonacci, Torres de Hanói).
 
-### 📏 [04. Listas e Sequências](./04-listas-e-sequencias)
+### 📏 [06. Listas e Sequências](./04-listas-e-sequencias)
 
 > Implementações manuais de Listas Encadeadas, Pilhas e Filas.
 
-### 🕵️ [05. Busca e Ordenação](./05-busca-e-ordenacao)
+### 🕵️ [07. Busca e Ordenação](./05-busca-e-ordenacao)
 
-> De algoritmos simples (Bubble Sort) a eficientes (Merge/Quick Sort).
+> De algoritmos clássicos simples (Bubble Sort, Selection Sort) a abordagens eficientes de divisão e conquista (Merge Sort, Quick Sort).
 
 ---
 
