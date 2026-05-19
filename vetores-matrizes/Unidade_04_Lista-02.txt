@@ -1,0 +1,438 @@
+
+--- PAGE 1 ---
+Professor: Paulo Vin´ ıcius Moreira Dutra
+paulo.dutra@ifsudestemg.edu.br
+Disciplina: Algoritmos e Estrutura de Dados I
+Guia de Tradu¸ c˜ ao: Matem´ atica para Programa¸ c˜ ao
+Esta tabela serve como um mapa mental para converter nota¸ c˜ oes matem´ aticas de somat´ orios e
+produt´ orios em algoritmos que utilizam la¸ cos de repeti¸ c˜ ao (loops).
+S´ ımbolo Matem´ atico Conceito no C´ odigo Valor Inicial (Acumulador)
+P (Somat´ orio)soma = soma + termo 0(Elemento Neutro da Soma)
+Q (Produt´ orio)prod = prod * termo 1(Elemento Neutro da Mult.)
+i= 1 (Limite Inferior)i = k (Exemplo: i = 1)In´ ıcio do la¸ co
+n(Limite Superior)i <= n (Exemplo: i <= 10)Condi¸ c˜ ao de parada
+(−1)i (Alternˆ ancia)if (i % 2 == 0) ou multiplicadorTrata sinais + e−
+i! (Fatorial) La¸ co aninhado ou acumulador extra1
+|. . .|(M´ odulo)abs(valor)Fun¸ c˜ ao de Valor Absoluto
+√x(Raiz Quadrada)sqrt(x)Fun¸ c˜ ao de Radicia¸ c˜ ao
+xn (Potˆ encia)pow(x, n) ou x**nFun¸ c˜ ao de Potˆ encia
+ai (Termo/´Indice)vetor[i]Acesso ` a posi¸ c˜ aoi
+∈(Pertencimento)if x in vetor:Verifica se existe no conjunto
+/∈(N˜ ao Pertencimento)if x not in vetor:Verifica se n˜ ao existe
+⌊x⌋(Piso/Inteiro)int(x) ou x // 1Arredondamento para baixo
+µ(M´ edia)media = soma / NValor m´ edio do conjunto
+A∪B(Uni˜ ao)C = A + B(sem duplicatas) Jun¸ c˜ ao de todos os elementos
+A∩B(Intersec¸ c˜ ao)if x in A and x in B:Apenas elementos em ambos
+A−B(Diferen¸ ca)if x in A and x not in B:Elementos que s´ o existem em A
+A⊂B(Subconjunto)if all(x in B for x in A):A est´ a contido em B
+A⊂B(Subconjunto)if all(x in B for x in A):A est´ a contido em B
+∧(Conjun¸ c˜ ao)andOperador l´ ogico ”E”
+∥V∥(Magnitude)sqrt(soma_quadrados)Comprimento/Norma do vetor
+ˆV(Vetor Unit´ ario)v[i] / magnitudeNormaliza¸ c˜ ao do vetor
+σ2 (Variˆ ancia)soma_diff_quad / NMedida de dispers˜ ao
+∃i, j:i̸=jEV i =V j L´ ogica de busca repetidaVerifica se h´ a valores repetidos
+Tabela 1: Mapeamento de operadores para l´ ogica de programa¸ c˜ ao.
+1
+--- PAGE 2 ---
+1 Vetores e Matrizes - Matem´ atica
+1.Desenvolva um programa que receba um conjunto de 10 n´ umeros inteiros e armazene-os em
+um vetor. O programa deve classificar cada n´ umero como ”Par”ou ”´Impar”e armazenar essas
+classifica¸ c˜ oes em um segundo vetor de strings. Ao final, exiba os dois vetores lado a lado.
+Entrada:10 n´ umeros inteiros, um por vez.
+Importante:
+(a) Utilize um la¸ cowhilepara garantir que apenas n´ umeros positivos sejam aceitos.
+Exemplo de Sa´ ıda:
+Vetor A Classifica¸ c~ ao:
+2 Par
+5 Impar
+8 Par
+2.Crie um algoritmo que leia 5 valores num´ ericos para um vetor A. Em seguida, calcule um
+vetor B onde cada elemento ´ e o triplo do elemento correspondente de A, mas apenas se o
+valor for m´ ultiplo de 3 e maior que 10.
+Entrada:5 n´ umeros reais para o vetorA.
+Importante:
+(a) Valide a entrada para n˜ ao aceitar o n´ umero zero.
+(b) Caso a condi¸ c˜ ao n˜ ao seja atendida, o valor no vetor B deve ser 0.
+Defini¸ c˜ ao Matem´ atica:
+Bi =
+(
+3×A i se (Ai >10) E (A i (mod 3) = 0)
+0 caso contr´ ario
+Exemplo de Sa´ ıda:
+A: [12, 9, 15, 5, 21]
+B: [36, 0, 45, 0, 63]
+3.Implemente um programa que simule a soma de dois conjuntos matem´ aticos (vetores). O
+usu´ ario deve informar 5 n´ umeros para o Vetor X e 5 para o Vetor Y. O programa deve gerar
+o Vetor Z, ondeZ i =X i +Y i.
+Entrada:10 n´ umeros no total (5 para X, 5 para Y).
+Importante:
+(a) Utilize um la¸ coforpara a opera¸ c˜ ao de soma.
+(b) Utilize um acumulador para calcular a soma total de todos os elementos de Z ao final.
+(c) Valide se as entradas s˜ ao n´ umeros dentro do intervalo [1,100].
+2
+--- PAGE 3 ---
+Defini¸ c˜ ao Matem´ atica:
+Z={z i |z i =x i +y i,parai= 1. . .5}
+Soma Total =
+5X
+i=1
+zi
+Exemplo de Sa´ ıda:
+Vetor Z: [10, 20, 30, 40, 50]
+Soma dos elementos de Z: 150
+4.Desenvolva um programa que verifique a existˆ encia de elementos duplicados em um vetor de
+5 posi¸ c˜ oes. O programa deve informar se h´ a pelo menos um par de n´ umeros iguais.
+Entrada:5 n´ umeros inteiros.
+Importante:
+(a) Exiba uma mensagem clara se encontrar duplicatas.
+(b) Valide a entrada para evitar n´ umeros negativos.
+Defini¸ c˜ ao Matem´ atica:Existe duplicata se∃i, jtal quei̸=jeV i =V j.( ”Existem ´ ındicesi
+ej, tal quei´ e diferente deje o valor na posi¸ c˜ aoV i ´ e igual ao valor na posi¸ c˜ aoVj.”)
+Exemplo de Sa´ ıda:
+Entrada: [1, 4, 6, 4, 9]
+Resultado: Existem elementos duplicados no conjunto.
+5.Escreva um programa que leia 8 n´ umeros inteiros e os armazene em um vetor. O programa
+deve contar e mostrar quantos n´ umeros s˜ ao positivos, quantos s˜ ao negativos e qual a m´ edia
+aritm´ etica apenas dos n´ umeros positivos.
+Entrada:8 n´ umeros inteiros (podem ser negativos ou positivos).
+Defini¸ c˜ ao Matem´ atica:
+¯xpos =
+P xi
+n ondex i >0
+Exemplo de Sa´ ıda:
+Positivos: 5 | Negativos: 3
+M´ edia dos Positivos: 14.5
+6.Crie um programa que apresente um menu interativo para manipula¸ c˜ ao de um vetor (inici-
+almente zerado). O menu deve ter as op¸ c˜ oes: 1-Inserir Valor, 2-Mostrar Vetor, 3-Sair.
+Importante:
+(a) Utilize um la¸ cowhilepara manter o menu ativo.
+7.Desenvolva um programa que receba 10 n´ umeros reais em um vetor e calcule o Produto
+Escalar entre os 5 primeiros e os 5 ´ ultimos elementos (considerando-os como dois vetores
+distintos).
+Importante:
+3
+--- PAGE 4 ---
+(a) Armazene os 10 em um ´ unico vetor.
+(b) Utilize operadores aritm´ eticos de multiplica¸ c˜ ao e adi¸ c˜ ao.
+Defini¸ c˜ ao Matem´ atica:
+⃗A· ⃗B=
+4X
+i=0
+(Vi ×V i+5)
+Exemplo de Sa´ ıda:
+Produto Escalar calculado: 145.80
+8.Implemente um programa que gere uma Progress˜ ao Aritm´ etica (PA) e a armazene em um
+vetor de 10 posi¸ c˜ oes. O usu´ ario deve informar o primeiro termo (a1) e a raz˜ ao (r).
+Importante:
+(a) Valide para que a raz˜ ao n˜ ao seja zero e Mostre o vetor resultante.
+Defini¸ c˜ ao Matem´ atica:Uma Progress˜ ao Aritm´ etica (PA) ´ e uma sequˆ encia num´ erica em que
+cada termo ´ e obtido somando a raz˜ ao (r) ao termo anterior.
+A f´ ormula geral da PA ´ e dada por:
+an =a 1 + (n−1)×r
+Onde:
+•a n = termo que se deseja calcular;
+•a 1 = primeiro termo da sequˆ encia;
+•n= posi¸ c˜ ao do termo na sequˆ encia;
+•r= raz˜ ao da PA.
+Exemplo:
+Para uma PA com:
+a1 = 2 er= 3
+O quinto termo ser´ a:
+a5 = 2 + (5−1)×3
+a5 = 2 + 12
+a5 = 14
+Exemplo de Sa´ ıda:
+Primeiro Termo=2,
+Raz~ ao = 3
+PA = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29]
+4
+--- PAGE 5 ---
+9.Escreva um algoritmo que leia um vetor de 10 n´ umeros e verifique se ele est´ a em ordem
+crescente. O programa deve exibir ”Ordenado” ou ”N˜ ao Ordenado”.
+Entrada:10 n´ umeros inteiros.
+Defini¸ c˜ ao Matem´ atica:Vetor ordenado se∀i:Vi ≤V i+1.
+Exemplo de Sa´ ıda:
+Vetor: [1, 2, 3, 5, 4, 6, 7, 8, 9, 10]
+Resultado: Nao Ordenado
+10.Desenvolva um programa que leia 10 valores em um vetor. Em seguida, pe¸ ca ao usu´ ario um
+valorX. O programa deve buscarXno vetor e informar em qual posi¸ c˜ ao ele foi encontrado
+pela primeira vez ou se n˜ ao existe no conjunto.
+Entrada:10 n´ umeros e um valor de buscaX.
+Exemplo de Sa´ ıda:
+Valor X encontrado na posicao: 4
+11.Intersec¸ c˜ ao Tripla de Conjuntos: Crie um programa que pe¸ ca ao usu´ ario o tamanhoNde
+trˆ es conjuntos de n´ umeros inteiros positivos. Cada conjunto deve possuir uma tamanho fixo.
+O programa deve preencher trˆ es vetores (A,BeC) e identificar os elementos que est˜ ao
+presentes simultaneamente nos trˆ es (A∩B∩C).
+Importante:
+(a) Valide o tamanhoN(deve ser maior que zero).
+(b) Use um menu para preencher os vetores individualmente.
+Exemplo de Sa´ ıda:
+Conjunto A = [1, 2, 3, 4]
+Conjunto B = [2, 3, 5, 6]
+Conjunto C = [0, 2, 3, 7]
+A B C = [2, 3]
+12.Soma e Subtra¸ c˜ ao de Vetores com Resultado. O usu´ ario informa o tamanhoNdos vetores. O
+programa deve preencher os vetoresUeVe calcular automaticamente os vetoresW=U+V
+eZ=U−V.
+Defini¸ c˜ ao Matem´ atica:
+W[i] =U[i] +V[i], Z[i] =U[i]−V[i]
+Importante:
+(a) Valide cada valor inserido emUeV(deve ser entre -50 e 50).
+(b) Use um menu interativo para ”Atualizar”, ”Calcular”e ”Exibir Resultados”.
+(c) Use um la¸ co aninhado para formatar a exibi¸ c˜ ao dos quatro vetores lado a lado na tela.
+5
+--- PAGE 6 ---
+Exemplo de Sa´ ıda:
+U = [10, 20, 30]
+V = [1, 2, 3]
+W = U + V = [11, 22, 33]
+Z = U - V = [9, 18, 27]
+13.Sequˆ encias de Fibonacci vs Tribonacci.Preencha dois vetores de tamanhoN(informado pelo
+usu´ ario) com a sequˆ encia de Fibonacci e a sequˆ encia de Tribonacci. O programa deve listar
+os n´ umeros que aparecem em ambas as sequˆ encias.
+Defini¸ c˜ ao Matem´ atica (Tribonacci):
+Tn =T n−1 +T n−2 +T n−3, T 0 = 0, T1 = 0, T2 = 1
+Importante:
+(a) ValideN(entre 3 e 25).
+(b) Use um la¸ co aninhado para buscar os termos comuns entre os dois vetores gerados.
+(c) Menu com op¸ c˜ oes de ”Gerar Sequˆ encias”e ”Buscar Comuns”.
+Exemplo de Sa´ ıda:
+Fibonacci = [0, 1, 1, 2, 3, 5, 8]
+Tribonacci = [0, 0, 1, 1, 2, 4, 7]
+Comuns = [0, 1, 2]
+14.Separa¸ c˜ ao de Primos e Compostos.O usu´ ario define o tamanhoN. O programa recebeN
+n´ umeros e os armazena em um vetor original. Em seguida, deve distribuir esses n´ umeros em
+outros dois vetores: um para N´ umeros Primos e outro para N´ umeros Compostos.
+Importante:
+(a) Valide que os n´ umeros inseridos sejam maiores que 1.
+(b) Os vetores de Primos e Compostos devem ser ”redimensionados”logicamente (usando um
+contador de posi¸ c˜ ao) ao longo do processamento.
+(c) Use um la¸ co aninhado para realizar a verifica¸ c˜ ao de primalidade de cada n´ umero.
+Exemplo de Sa´ ıda:
+Vetor Original = [2, 4, 5, 9, 11, 15]
+Primos = [2, 5, 11]
+Compostos = [4, 9, 15]
+6
+--- PAGE 7 ---
+15.M´ edia M´ ovel de Sinais Matem´ aticos.Dado um vetor deNamostras (tamanho definido pelo
+usu´ ario), calcule a m´ edia m´ ovel de janela 3 e armazene o resultado em um segundo vetor de
+tamanhoN−2.
+Defini¸ c˜ ao Matem´ atica:
+M[i] = V[i] +V[i+ 1] +V[i+ 2]
+3
+Importante:
+(a) Valide queN≥3.
+(b) Use um la¸ co aninhado para calcular o somat´ orio da janela de cada posi¸ c˜ ao de forma
+manual.
+(c) Menu interativo para alterar amostras ou visualizar o gr´ afico (em texto).
+Exemplo de Sa´ ıda:
+Amostras = [3, 6, 9, 12, 15]
+Media Movel = [6.0, 9.0, 12.0]
+16.Diferen¸ ca de Conjuntos (A - B) em Novo Vetor.O usu´ ario define o tamanho dos conjuntosA
+eB(podem ser diferentes). O programa deve gerar o vetorCcontendo apenas os elementos
+deAque n˜ ao est˜ ao emB.
+Importante:
+(a) Valide que n˜ ao haja duplicatas ao inserir dados emA.
+(b) Use um la¸ co aninhado para verificar a ausˆ encia de cada elemento deAemB.
+(c) Menu para preencherA,Be exibir a diferen¸ ca.
+Exemplo de Sa´ ıda:
+A = [1, 2, 3, 4, 5]
+B = [2, 4]
+C = A - B = [1, 3, 5]
+17.Diferen¸ ca Sim´ etrica de Conjuntos.A partir de dois vetoresAeBde tamanhoN, gere um
+terceiro vetorCcontendo a diferen¸ ca sim´ etrica: (A∪B)−(A∩B).
+Importante:
+(a) Valide se as entradas s˜ ao n´ umeros inteiros.
+(b) Use la¸ cos aninhados para realizar as opera¸ c˜ oes de uni˜ ao e intersec¸ c˜ ao intermedi´ arias.
+(c) O menu deve permitir visualizar os passos intermedi´ arios do c´ alculo.
+Exemplo de Sa´ ıda:
+7
+--- PAGE 8 ---
+A = [1, 2, 3]
+B = [3, 4, 5]
+Diferen¸ ca Sim´ etrica = [1, 2, 4, 5]
+18.Adi¸ c˜ ao de Polinˆ omios por Coeficientes.Represente dois polinˆ omios de grauN−1 usando
+dois vetores de tamanhoN. O programa deve calcular o polinˆ omio resultante da soma em
+um terceiro vetor.
+Defini¸ c˜ ao Matem´ atica:
+P(x) =
+N−1X
+i=0
+cixi
+Importante:
+(a) Valide o grau do polinˆ omio (m´ aximo 10).
+(b) Use um menu para inserir coeficientes de cada polinˆ omio.
+(c) Use um la¸ co aninhado para exibir a express˜ ao alg´ ebrica formatada (ex: 3x2 + 2x+ 5).
+Exemplo de Sa´ ıda:
+P1(x) = 2 + 3x + 4x²
+P2(x) = 1 + 5x + 2x²
+Resultado = 3 + 8x + 6x²
+19.Intercala¸ c˜ ao de Sequˆ encias Num´ ericas.O usu´ ario informa o tamanhoN. O programa recebe
+dois vetoresAeBe gera um terceiro vetorCde tamanho 2Nintercalando seus elementos.
+Importante:
+(a) Valide as entradas deAeBpara garantir que sejam sequˆ encias crescentes.
+(b) Use um la¸ co aninhado para verificar a ordena¸ c˜ ao dos vetores inseridos.
+(c) O menu deve permitir ”Intercalar”e ”Validar Sequˆ encias”.
+Exemplo de Sa´ ıda:
+A = [1, 3, 5]
+B = [2, 4, 6]
+C = [1, 2, 3, 4, 5, 6]
+20.Desvio Estat´ ıstico Individual.A partir de um vetor deNvalores, calcule a m´ edia e gere um
+segundo vetor contendo o desvio de cada valor em rela¸ c˜ ao ` a m´ edia.
+Defini¸ c˜ ao Matem´ atica:
+D[i] =V[i]−µ
+Importante:
+8
+--- PAGE 9 ---
+(a) Valide as entradas (devem ser n´ umeros reais).
+(b) Use um la¸ co aninhado para, ap´ os o c´ alculo dos desvios, verificar qual valor possui o
+”desvio absoluto m´ aximo”comparando todos entre si.
+(c) Menu com op¸ c˜ oes de ”Inserir”, ”Calcular”e ”Relat´ orio de Desvios”.
+Exemplo de Sa´ ıda:
+Valores = [10, 20, 30, 40]
+M´ edia = 25.0
+Desvios = [-15.0, -5.0, 5.0, 15.0]
+21.Uni˜ ao de Conjuntos Num´ ericos.Crie um programa que receba dois conjuntos de n´ umeros
+inteiros (vetores de tamanho 5). O programa deve gerar um terceiro vetor representando a
+uni˜ ao dos dois conjuntos (A∪B), garantindo que n˜ ao existam elementos duplicados.
+Importante:
+(a) Use um menu para inserir os dados do Conjunto A, Conjunto B e exibir o resultado.
+(b) Valide se os n´ umeros inseridos s˜ ao positivos.
+(c) Utilize um la¸ co aninhado para verificar se um elemento j´ a existe no vetor resultante antes
+de adicion´ a-lo.
+Exemplo de Sa´ ıda:
+Conjunto A = [1, 2, 3, 4, 5]
+Conjunto B = [4, 5, 6, 7, 8]
+Uni~ ao = [1, 2, 3, 4, 5, 6, 7, 8]
+22.Intersec¸ c˜ ao e Filtragem de Dados.Desenvolva um sistema que identifique os elementos co-
+muns entre dois vetores de 6 elementos cada (A∩B).
+Defini¸ c˜ ao Matem´ atica:
+x∈(A∩B)⇐ ⇒x∈A∧x∈B
+Importante:
+(a) O menu deve permitir ”Preencher Vetores”, ”Calcular Intersec¸ c˜ ao”e ”Limpar”.
+(b) Valide as entradas para aceitar apenas n´ umeros entre -100 e 100.
+(c) Use um la¸ co aninhado para comparar cada elemento de A com todos os elementos de B.
+Exemplo de Sa´ ıda:
+A = [1, 2, 3, 4, 5, 6]
+B = [4, 5, 6, 7, 8, 9]
+Intersec¸ c~ ao = [4, 5, 6]
+9
+--- PAGE 10 ---
+23.Gerador de Sequˆ encia de Fibonacci em Vetor.Implemente um programa que pe¸ ca ao usu´ ario
+o n´ umero de termosN(m´ aximo 20) e preencha um vetor com a sequˆ encia de Fibonacci at´ e
+esse termo.
+Defini¸ c˜ ao Matem´ atica:
+Fn =F n−1 +F n−2,comF 0 = 0, F1 = 1
+Importante:
+(a) Valide a entrada deNusandowhile(deve ser entre 2 e 20).
+(b) Use um la¸ co aninhado para verificar, a cada novo termo gerado, se ele ´ e um n´ umero
+primo (verificando divisores de 2 at´ e√Fn).
+Exemplo de Sa´ ıda:
+N = 8
+Fibonacci = [0, 1, 1, 2, 3, 5, 8, 13]
+24.Crivo de N´ umeros Primos em Sequˆ encia.Dado um vetor preenchido com 10 n´ umeros aleat´ o-
+rios pelo usu´ ario, o programa deve criar um novo vetor contendo apenas os n´ umeros primos
+encontrados no vetor original.
+Importante:
+(a) Menu interativo para ”Inserir”, ”Filtrar Primos”e ”Mostrar Vetores”.
+(b) Valide se as entradas s˜ ao n´ umeros inteiros maiores que 1.
+(c) Use um la¸ co aninhado: o la¸ co externo percorre o vetor original e o interno verifica a
+primalidade de cada n´ umero.
+Exemplo de Sa´ ıda:
+Original = [2, 4, 5, 7, 9, 10]
+Primos = [2, 5, 7]
+25.An´ alise de Progress˜ ao Aritm´ etica (PA).Crie um programa que receba o primeiro termo (a1)
+e a raz˜ ao (r) de uma PA. O programa deve preencher um vetor de 10 posi¸ c˜ oes com os termos
+da sequˆ encia.
+Defini¸ c˜ ao Matem´ atica:
+an =a 1 + (n−1)·r
+Importante:
+(a) Menu para alterara 1 er, ou calcular a soma dos termos.
+(b) Valide se a raz˜ aor´ e diferente de zero.
+(c) Use um la¸ co aninhado para mostrar a sequˆ encia na tela, destacando com um s´ ımbolo
+especial os termos que s˜ ao m´ ultiplos de 5.
+10
+--- PAGE 11 ---
+Exemplo de Sa´ ıda:
+Primeiro Termo = 2
+Raz~ ao = 3
+PA = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29]
+26.Identifica¸ c˜ ao de Progress˜ ao Geom´ etrica (PG).O usu´ ario insere 5 n´ umeros em um vetor. O
+programa deve verificar se esses n´ umeros formam uma PG e calcular a raz˜ aoq.
+Defini¸ c˜ ao Matem´ atica:
+q= an
+an−1
+Importante:
+(a) Valide se nenhum termo inserido ´ e zero.
+(b) Use um menu interativo para reinserir dados ou verificar a sequˆ encia.
+(c) Use um la¸ co aninhado para realizar uma busca sequencial no vetor e verificar se a raz˜ ao
+se mant´ em constante entre todos os pares adjacentes.
+Exemplo de Sa´ ıda:
+Sequ^ encia = [2, 4, 8, 16, 32]
+´E uma PG
+Raz~ ao q = 2
+27.Verifica¸ c˜ ao de Subconjunto Pr´ oprio.Dados dois vetores,A(tamanho 4) eB(tamanho 8), o
+programa deve determinar seA´ e um subconjunto deB(A⊂B).
+Importante:
+(a) Valide que os elementos deAeBsejam distintos dentro de seus pr´ oprios vetores.
+(b) Menu para preencherA, preencherBou realizar o teste de inclus˜ ao.
+(c) Use um la¸ co aninhado: para cada elemento deA, percorra o vetorBpara encontrar uma
+correspondˆ encia.
+Exemplo de Sa´ ıda:
+A = [2, 4, 6, 8]
+B = [1, 2, 3, 4, 5, 6, 7, 8]
+A ´ e subconjunto de B
+28.Magnitude e Normaliza¸ c˜ ao Vetorial.Receba um vetor de 3 dimens˜ oes (representando um
+vetor noR 3). O programa deve calcular sua magnitude (norma) e gerar o vetor unit´ ario
+correspondente.
+11
+--- PAGE 12 ---
+Defini¸ c˜ ao Matem´ atica:
+∥V∥=
+p
+x2 +y 2 +z 2
+ˆV= 1
+∥V∥ ·V
+Importante:
+(a) Valide que o vetor n˜ ao seja o vetor nulo (0,0,0).
+(b) Menu para atualizar coordenadas ou ver resultados.
+(c) Use um la¸ co aninhado para elevar cada componente ao quadrado dentro de uma simu-
+la¸ c˜ ao de somat´ orio manual.
+Exemplo de Sa´ ıda:
+V = (3, 4, 0)
+Magnitude = 5.0
+Vetor Unit´ ario = (0.6, 0.8, 0.0)
+29.Gera¸ c˜ ao de Linha do Triˆ angulo de Pascal.Pe¸ ca ao usu´ ario o n´ umero da linhan(de 0 a 10)
+e preencha um vetor com os coeficientes binomiais daquela linha.
+Defini¸ c˜ ao Matem´ atica: n
+k
+
+= n!
+k!(n−k)!
+Importante:
+(a) Valide o valor den(deve ser entre 0 e 10).
+(b) Use um menu para escolher a linha ou sair.
+(c) Use um la¸ co aninhado para calcular os fatoriais necess´ arios para cada termo da linha.
+Exemplo de Sa´ ıda:
+Linha n = 5
+Tri^ angulo de Pascal:
+[1, 5, 10, 10, 5, 1]
+30.C´ alculo de Variˆ ancia Populacional.Dado um vetor de 8 notas de alunos, calcule a m´ edia
+aritm´ etica e a variˆ ancia da sequˆ encia.
+Defini¸ c˜ ao Matem´ atica:
+σ2 =
+P(xi −µ) 2
+N
+Importante:
+(a) Valide se as notas est˜ ao no intervalo [0.0,10.0].
+12
+--- PAGE 13 ---
+(b) Menu para inserir notas, calcular m´ edia ou calcular variˆ ancia.
+(c) Use um la¸ co aninhado para calcular a soma dos quadrados das diferen¸ cas (xi −µ) 2 de
+forma detalhada para cada elemento.
+Exemplo de Sa´ ıda:
+Notas = [7.0, 8.0, 6.0, 9.0, 5.0, 10.0, 8.0, 7.0]
+M´ edia = 7.5
+Vari^ ancia = 2.25
+13

@@ -69,5 +69,3 @@ git clone https://github.com/dutrapaulovm/AEDI.git
 ```bash
 python 01-logica-basica/lista-03/lista03_sec1_ex01_soma.py
 ```
-
----

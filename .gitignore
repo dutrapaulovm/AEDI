@@ -1,3 +1,8 @@
 # Ignorar guia interno do Antigravity
 AEDI_SKILLS.md
 AEDI_SKILLS.MD
+
+# Ignorar caches do Python
+__pycache__/
+*.pyc
+
