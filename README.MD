@@ -37,15 +37,15 @@ A estrutura segue a evolução cronológica e teórica da disciplina:
 
 > Estruturas de controle para iteração, contadores, acumuladores e validações com `while` e `for`.
 
-- [x] **Unidade 3 - Lista 01:** Laços de repetição simples, loops determinados e contadores.
-- [x] **Unidade 3 - Lista 02:** Loops indeterminados com flags de parada, validações de entrada e algoritmos acumulativos.
+- [x] **Lista 01:** Laços de repetição simples, loops determinados e contadores.
+- [x] **Lista 02:** Loops indeterminados com flags de parada, validações de entrada e algoritmos acumulativos.
 
 ### 📊 [03. Vetores e Matrizes](./vetores-matrizes)
 
 > Estruturas homogêneas unidimensionais (vetores/arrays 1D) e multidimensionais (matrizes/arrays 2D).
 
-- [x] **Unidade 4 - Lista 01:** Criação, leitura, busca linear, ordenação básica e manipulação de vetores.
-- [x] **Unidade 4 - Lista 02:** Operações matriciais, soma, produto de matrizes, transposição e diagonais.
+- [x] **Lista 01:** Criação, leitura, busca linear, ordenação básica e manipulação de vetores.
+- [x] **Lista 02:** Operações matriciais, soma, produto de matrizes, transposição e diagonais.
 
 ### ⚙️ [04. Funções](./02-funcoes)
 
